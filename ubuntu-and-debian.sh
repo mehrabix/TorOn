@@ -27,3 +27,4 @@ case $answer in
                 ;;
 echo "Get And Set Tor new Bridges...";
 proxychains tbcli -a;
+echo "All Done :)";
