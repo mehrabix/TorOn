@@ -21,6 +21,7 @@ case $answer in
         y|Y)
                 clear
                 "Starting Tor Cli proxy..";
+                touch /etc/profile.d/proxy.sh;
                 echo "export http_proxy="http://127.0.0.1:8118" >> /etc/profile.d/proxy.sh;
                 echo "export https_proxy="https://127.0.0.1:8118" >> /etc/profile.d/proxy.sh;
                 echo "Done! :)";
