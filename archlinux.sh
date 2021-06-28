@@ -11,6 +11,8 @@ echo "forward-socks5t   /               127.0.0.1:9050 ." >> /etc/privoxy/config
 echo "forward-socks5t   /               127.0.0.1:9050 ." >> /home/$(logname)/config;
 echo "forward-socks5t   /               127.0.0.1:9050 ." >> /root/config;
 sudo curl -s "https://raw.githubusercontent.com/unprogramable/TorBridge/master/tbcli-installer"|sudo bash;
+echo "Get And Set Tor new Bridges...";
+proxychains tbcli -a;
 echo "Use Tor Proxy On Cli Shell?"
 read answer
 answer=${answer:-'y'}
@@ -25,6 +27,4 @@ case $answer in
         n|N)
                 echo "Just Set Your System/Browser/App Proxy to 127.0.0.1:8118 And Rock🤘🤘";
                 ;;
-echo "Get And Set Tor new Bridges...";
-proxychains tbcli -a;
 echo "All Done :)";
