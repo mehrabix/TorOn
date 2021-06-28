@@ -1,6 +1,7 @@
 !/bin/bash
                                
-sudo apt update 1>/dev/null 2>&1;
+sudo su;
+sudo apt update;
 sudo apt install torsocks privoxy tor curl obfs4proxy proxychains4 feh;
 sudo systemctl enable tor privoxy;
 sudo systemctl start tor;      
