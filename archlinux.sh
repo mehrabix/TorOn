@@ -1,5 +1,5 @@
-!/bin/bash
-                               
+#!/bin/bash
+clear
 sudo pacman -Syu 1>/dev/null 2>&1;
 sudo pacman -S torsocks privoxy tor curl obfs4proxy proxychains-ng feh;
 sudo systemctl enable tor privoxy;
@@ -19,12 +19,12 @@ answer=${answer:-'y'}
 case $answer in
         y|Y)
                 clear
-                "Starting Tor Cli proxy🤘🤘..";
+                "Starting Tor Cli proxy..";
                 echo "export http_proxy="http://127.0.0.1:8118" >> /etc/profile.d/proxy.sh;
                 echo "export https_proxy="https://127.0.0.1:8118" >> /etc/profile.d/proxy.sh;
                 echo "Done! :)";
                 ;;
         n|N)
-                echo "Just Set Your System/Browser/App Proxy to 127.0.0.1:8118 And Rock🤘🤘";
+                echo "Just Set Your System/Browser/App Proxy to 127.0.0.1:8118 And Rock";
                 ;;
 echo "All Done :)";
